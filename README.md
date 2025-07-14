@@ -16,15 +16,28 @@ This repo contains structured solutions to coding problems I'm practicing regula
 
 ---
 
+### 🔹 **Week 2: Core Data Structures & Searching**
+> 🗓️ Topics Practiced:
+- ✅ HashMap (Key-Value based problem solving, frequency count, grouping)
+- ✅ Stacks (Balanced parentheses, Next Greater Element, etc.)
+- ✅ Queues (Sliding window max, BFS-style problems)
+- ✅ Binary Search (Search in sorted arrays, lower/upper bounds, rotated arrays)
+
+---
+
 ## 📂 Folder Structure
 
-| Folder / File | Description |
-|---------------|-------------|
-| `Arrays/` | Array-related problems |
-| `Strings/` | String logic and algorithms |
-| `HashSet/` | Problems solved using Java’s `HashSet` |
-| `SlidingWindow/` | Problems using the sliding window approach |
-| `README.md` | Project info & weekly logs |
+| Folder / File      | Description                                |
+|---------------------|--------------------------------------------|
+| `Arrays/`           | Array-related problems                     |
+| `Strings/`          | String logic and algorithms                |
+| `HashSet/`          | Problems solved using Java’s `HashSet`     |
+| `SlidingWindow/`    | Problems using the sliding window approach |
+| `HashMap/`          | Frequency maps, grouping, key-value logic  |
+| `Stacks/`           | Stack-based problems (e.g., NGE, balance)  |
+| `Queues/`           | Queue-based logic (e.g., BFS, windows)     |
+| `BinarySearch/`     | All binary search-based problems           |
+| `README.md`         | Project info & weekly logs                 |
 
 ---
 
@@ -34,7 +47,10 @@ This repo contains structured solutions to coding problems I'm practicing regula
 - ✅ Longest substring without repeating characters
 - ✅ Remove duplicates using `HashSet`
 - ✅ Count distinct elements in a window
-- ✅ Basic string manipulations
+- ✅ Frequency count using `HashMap`
+- ✅ Valid parentheses using `Stack`
+- ✅ Find first non-repeating character using `Queue`
+- ✅ Binary Search in rotated sorted array
 
 ---
 
