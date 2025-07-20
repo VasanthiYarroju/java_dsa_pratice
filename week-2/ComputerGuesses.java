@@ -3,37 +3,42 @@ import java.util.Scanner;
 public class ComputerGuesses {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int low = 1;
-        int high = 100;
-        int response = -1;
+        boolean playAgain = true;
 
-        System.out.println("🤖 Think of a number between 1 and 100.");
-        System.out.println("I will try to guess it! Respond with:");
-        System.out.println("1  →  My number is higher");
-        System.out.println("-1 →  My number is lower");
-        System.out.println("0  →  Correct!");
+        System.out.println("🎮 Welcome to the Number Guessing Game!");
+        System.out.println("Think of a number between 1 and 100.");
+        System.out.println("I'll try to guess it!");
 
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            System.out.print("👉 Is it " + mid + "? Your response: ");
-            response = sc.nextInt();
+        while (playAgain) {
+            int low = 1, high = 100, attempts = 0;
+            int response;
 
-            if (response == 0) {
-                System.out.println("🎉 Yay! I guessed your number: " + mid);
-                break;
-            } else if (response == 1) {
-                low = mid + 1;
-            } else if (response == -1) {
-                high = mid - 1;
-            } else {
-                System.out.println("❌ Invalid response. Please enter 1, -1, or 0.");
+            while (low <= high) {
+                int mid = low + (high - low) / 2;
+                System.out.print("👉 Is it " + mid + "? (1: higher, -1: lower, 0: correct): ");
+                response = sc.nextInt();
+                attempts++;
+
+                if (response == 0) {
+                    System.out.println("🎉 I guessed your number in " + attempts + " attempts!");
+                    break;
+                } else if (response == 1) {
+                    low = mid + 1;
+                } else if (response == -1) {
+                    high = mid - 1;
+                } else {
+                    System.out.println("❌ Please enter only 1, -1, or 0.");
+                    attempts--; // Don't count invalid input
+                }
             }
+
+            System.out.print("🔁 Do you want to play again? (yes/no): ");
+            sc.nextLine(); // consume leftover newline
+            String answer = sc.nextLine().trim().toLowerCase();
+            playAgain = answer.equals("yes") || answer.equals("y");
         }
 
-        if (low > high) {
-            System.out.println("😓 Hmm... Are you sure you answered correctly?");
-        }
-
+        System.out.println("👋 Thanks for playing!");
         sc.close();
     }
 }
