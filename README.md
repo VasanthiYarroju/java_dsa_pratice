@@ -23,6 +23,17 @@ This repo contains structured solutions to coding problems I'm practicing regula
 - ✅ Queues (Sliding window max, BFS-style problems)
 - ✅ Binary Search (Search in sorted arrays, lower/upper bounds, rotated arrays)
 
+### 🔹 **Week 3: Linked Lists, Trees & Sorting**
+> 🗓️ Topics Practiced:
+
+- ✅ Linked Lists (Singly, Merge Lists, Middle Node, Cycle detection)
+
+- ✅ Binary Trees (DFS, BFS, Inorder/Preorder/Postorder traversals)
+
+- ✅ Binary Search Trees (Insert, Search, Lowest Common Ancestor)
+
+- ✅ Sorting Algorithms (Merge Sort, Quick Sort, Insertion Sort)
+
 ---
 
 ## 📂 Folder Structure
