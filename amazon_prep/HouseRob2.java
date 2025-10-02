@@ -24,9 +24,9 @@ class HouseRob2 {
         HouseRob2 sol = new HouseRob2();
 
         
-        int[] nums3 = {2, 7, 9, 3, 1}; 
+        int[] nums = {2, 7, 9, 3, 1}; 
        
-        System.out.println("Robbed max (nums3) = " + sol.rob(nums3)); // expected 12
+        System.out.println("Robbed max (nums3) = " + sol.rob(nums)); 
         
     }
 }
