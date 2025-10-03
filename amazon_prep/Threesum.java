@@ -30,7 +30,7 @@ public class Threesum {
             }
         }
 
-        return new ArrayList<>(resultSet);
+        return new ArrayList<>
     }
 
     public static void main(String[] args) {
