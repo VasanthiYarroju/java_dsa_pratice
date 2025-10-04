@@ -25,7 +25,7 @@ public class Threesum {
                     // skip duplicates for j
                     while (j < k && nums[j] == nums[j - 1]) j++;
                     // skip duplicates for k
-                    while (j < k && nums[k] == nums[k + 1]) k--
+                    while (j < k && nums[k] == nums[k + 1]) k--;
                 }
             }
         }
