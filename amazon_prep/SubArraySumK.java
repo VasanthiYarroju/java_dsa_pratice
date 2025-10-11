@@ -14,7 +14,7 @@ class Solution {
 
             // Check if there's a prefix with sum = currentSum - k
             if (seen.containsKey(sum - k)) {
-                
+                count += seen.get(sum - k);
             }
 
             // Store/update current prefix sum frequency
