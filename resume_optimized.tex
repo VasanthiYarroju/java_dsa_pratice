@@ -1,0 +1,257 @@
+% Optimized LaTeX resume (single page with proper logos)
+\documentclass[9pt,letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.5cm,
+    bottom=1.5cm,
+    left=1.5cm,
+    right=1.5cm,
+    footskip=0.8cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0,0,0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Yarroju Vasanthi - Resume},
+    pdfauthor={Yarroju Vasanthi},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% Ensure machine-readable PDF (when using pdfTeX)
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.12cm}
+\pagenumbering{gobble}
+
+% Reduced spacing for sections
+\titleformat{\section}{\needspace{3\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{0.5pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.2cm}{0.15cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+% Simple environments that work reliably
+\newenvironment{onecolentry}{\begin{adjustwidth}{0pt}{0pt}}{\end{adjustwidth}}
+
+% twocolentry: usage \begin{twocolentry}{<right column text>} <left column content> \end{twocolentry}
+\newenvironment{twocolentry}[1]{%
+    \begin{onecolentry}
+    \begin{paracol}{2}
+    \raggedright% left column (user writes left content immediately)
+}{%
+    \switchcolumn
+    \raggedleft #1%
+    \end{paracol}
+    \end{onecolentry}
+}
+
+% highlights list (compact bullets) - reduced spacing
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.05cm,
+        parsep=0.05cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=8pt
+    ]
+}{\end{itemize}}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.05cm,
+        parsep=0.05cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{\end{itemize}}
+
+% Header helper
+\newcommand{\contactsep}{\kern 4pt $|$ \kern 4pt}
+
+\begin{document}
+
+\begin{center}
+    {\fontsize{22pt}{22pt}\selectfont \textbf{YARROJU VASANTHI}}\\[4pt]
+    \normalsize
+    �� Guntur, AP \contactsep
+    ✉️ \href{mailto:vasanthiyarroju@gmail.com}{vasanthiyarroju@gmail.com} \contactsep
+    �� \href{tel:+919398216641}{+91 9398216641} \contactsep
+    \href{https://linkedin.com/in/vasanthi-yarroju}{\faLinkedin} \contactsep
+    \href{https://github.com/Vasanthi-Yarroju}{\faGithub}
+\end{center}
+
+\vspace{-0.2cm}
+
+\section{PROFESSIONAL SUMMARY}
+\begin{onecolentry}
+Computer Science undergraduate with strong expertise in full-stack development. Experienced in building end-to-end web applications using \textbf{React.js}, \textbf{Node.js}/\textbf{Express.js}, and \textbf{Firebase}/\textbf{MongoDB} with solid foundation in system design and cloud platforms.
+\end{onecolentry}
+
+\section{PROFESSIONAL EXPERIENCE}
+
+\noindent
+\textbf{Fullstack Developer Intern}, AWSC - Earth Observation System Project \href{https://github.com/VasanthiYarroju/Earth_Observation_System}{\faGithub} \hfill August 2025
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Developed Earth Observation System using \textbf{React.js} frontend and \textbf{Node.js} backend with real-time satellite data visualization
+    \item Implemented secure authentication and responsive UI improving data accessibility for agricultural monitoring
+    \item \textbf{Tech Stack:} React.js, Node.js, MongoDB, Google Cloud Storage, OpenSky API
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\noindent
+\textbf{Android Development Intern}, Google for Developers \hfill Sep-Oct 2023
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Applied Android fundamentals (\textbf{Kotlin}, \textbf{Firebase}) to design 3+ intuitive app interfaces, enhancing user engagement
+\end{highlights}
+\end{onecolentry}
+
+\section{PROJECTS}
+
+\noindent
+\textbf{Edu-AI -- AI-Based Learning Platform} \href{https://github.com/VasanthiYarroju/EduAI-AI-Powered-Education-Platform}{\faGithub} \href{https://eduai-portal.vercel.app/}{\faGlobe} \hfill July 2025
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Built full-stack learning platform with learner/volunteer flows using \textbf{React.js} and \textbf{Firebase}
+    \item Integrated AI-driven assessments via \textbf{Google Gemini API} for adaptive content across 100+ scenarios
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\noindent
+\textbf{EventHub -- Event Management Website} \href{https://github.com/VasanthiYarroju/EventHub}{\faGithub} \hfill May 2024
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Developed interactive web app for event management using \textbf{React.js}, \textbf{Node.js}, and Firebase integration
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\noindent
+\textbf{StudyFolio -- Modular E-learning Platform} \href{https://github.com/VasanthiYarroju/Study-folioo}{\faGithub} \href{https://vasanthiyarroju.github.io/Study-folioo/}{\faGlobe} \hfill May 2023
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Developed modular platform organizing coursework with progress tracking and improved responsiveness
+\end{highlights}
+\end{onecolentry}
+
+\section{SKILLS}
+\begin{onecolentry}
+\textbf{Programming Languages:} JavaScript, Java, C, SQL \\
+\textbf{Frameworks & Libraries:} React.js, HTML5, CSS3, Tailwind CSS,Node.js, Express.js \\
+\textbf{Databases \& Cloud:} Firebase, MongoDB, Google Cloud Storage \\
+\textbf{Development Tools:} Git, GitHub, Postman, VS Code, Micorsoft Suite, Google Workspace, Vite \\
+\textbf{Design Tools:} Canva (Advanced), Figma (Basic) \\
+\textbf{Soft Skills:} Problem Solving, Leadership, Team Collaboration, Product Thinking
+\end{onecolentry}
+
+\section{EDUCATION}
+
+\noindent
+\textbf{VVIT}, B.Tech Computer Science and Engineering -- \textbf{CGPA: 8.92} \hfill 2022 -- 2026
+
+\vspace{0.1cm}
+
+\noindent
+\textbf{Sri Chaitanya Junior College} -- \textbf{98\%} \hfill 2020 -- 2022
+
+\vspace{0.1cm}
+
+\noindent
+\textbf{Swami School} -- \textbf{100\%} \hfill 2020
+
+\section{POSITIONS OF RESPONSIBILITY}
+
+\noindent
+\textbf{Secretary} -- Institution's Innovation Council \hfill June 2024 -- Present
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Coordinated weekly innovation events and acted as communication bridge between students and faculty members
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\noindent
+\textbf{Social Media Head} -- Institution's Innovation Council \hfill June 2024 -- Present
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Designed 50+ digital posters using Canva, contributing to 25\% increase in event participation
+    \item Managed social platforms, growing engagement by 40\% via targeted campaigns
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\noindent
+\textbf{ACM Officer}, VVIT ACM Student Chapter \hfill Apr 2024 -- Apr 2025 \\
+VVIT University
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Organized technical workshops and coding competitions for 200+ students
+    \item Facilitated knowledge sharing sessions on emerging technologies and industry trends
+\end{highlights}
+\end{onecolentry}
+
+\section{AFFILIATIONS}
+
+\noindent
+\textbf{Member}, Association for Computing Machinery (ACM) \hfill Apr 2024 -- Apr 2025
+
+\section{CERTIFICATIONS}
+\begin{onecolentry}
+\begin{highlightsforbulletentries}
+    \item Data Structures \& Algorithms with C (Great Learning)
+    \item Frontend Development - HTML, CSS, JS (Coursera)
+    \item Programming in Java (NPTEL)
+    \item From Learner to Builder: Become an AI Agent Architect (IBM SkillsBuild)
+\end{highlightsforbulletentries}
+\end{onecolentry}
+
+\end{document}
