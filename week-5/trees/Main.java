@@ -22,7 +22,7 @@ class Solution {
         if (root.right == null) return left + 1;
 
         // If both exist, take the smaller one
-        
+        return Math.min(left, right) + 1;
     }
 }
 
