@@ -16,7 +16,7 @@ public class Removeduplicates {
         }
     }
 
-    public static int removeDuplicates(int[] nums) 
+    public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
 
         int i = 0; // slow pointer for last unique element
