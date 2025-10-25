@@ -14,7 +14,7 @@ public class Removeduplicates {
         for (int i = 0; i < newLength; i++) {
             System.out.print(nums[i] + " ");
         }
-    }
+    
 
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
