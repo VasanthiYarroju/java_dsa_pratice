@@ -14,7 +14,7 @@ public class Sort_colors {
                 nums[i]=t;
                 right--;
             }else{
-                i++
+                i++;
             }
         }
     }
