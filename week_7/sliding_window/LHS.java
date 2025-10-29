@@ -1,3 +1,4 @@
+package sliding_window;
 import java.util.Arrays;
 public class LHS {
     public static void main(String[] args) {
