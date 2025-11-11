@@ -7,14 +7,17 @@ public class liking {
     public static int maxSatisfaction(int[] l){
         int n=l.length;
         Arrays.sort(l);
-        int max=0;
-        for(int i=0;i<n;i++){
-            int sum=0;
-            for(int j=i;j<n;j++){
-                sum+=l[j]*(j-i+1);
+        int curr=0;
+        int ans=0;
+        for(int i=n-1;i>=0;i--){
+            curr+=l[i];
+            if(curr>0){
+                ans+=curr;
             }
-            max=Math.max(max,sum);
+            else{
+                break;
+            }
         }
-        return max;
+        return ans;
     }
 }
