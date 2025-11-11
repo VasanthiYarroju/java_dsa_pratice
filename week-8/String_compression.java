@@ -1,31 +1,29 @@
-public class String_compression {
-    public static int compress(char[] chars){
-        int n=chars.length;
-        int write=0,end=0;
-        while(end<n){
-            char current=chars[end];
-            int count=0;
-            while(end<n && chars[end]==current){
-                end++;
+abstract class StringCompression {
+    public abstract String compress(String input);
+}
+
+class Compression extends StringCompression {
+    @Override
+    public String compress(String input) {
+        if (input == null || input.isEmpty()) {
+            return input;
+        }
+
+        StringBuilder compressed = new StringBuilder();
+        int count = 1;
+
+        for (int i = 1; i < input.length(); i++) {
+            if (input.charAt(i) == input.charAt(i - 1)) {
                 count++;
-            }
-            chars[write++]=current;
-            if(count>1){
-                String countStr=String.valueOf(count);
-                for(char c:countStr.toCharArray()){
-                    chars[write++]=c;
-                }
+            } else {
+                compressed.append(input.charAt(i - 1));
+                compressed.append(count);
+                count = 1;
             }
         }
-        return write;
-    }
-    public static void main(String[] args) {
-        char[] chars = {'a','a','b','b','c','c','c'};
-        int newLength = compress(chars);
-        System.out.println("Compressed length: " + newLength);
-        System.out.print("Compressed array: ");
-        for(int i=0; i<newLength; i++){
-            System.out.print(chars[i]);
-        }
+        compressed.append(input.charAt(input.length() - 1));
+        compressed.append(count);
+
+        return compressed.toString();
     }
 }
