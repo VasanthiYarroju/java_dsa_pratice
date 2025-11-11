@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 public class BestTime_to_buy_sell {
      public static void main(String[] args) {
         int[] prices={7,1,5,3,6,4};
