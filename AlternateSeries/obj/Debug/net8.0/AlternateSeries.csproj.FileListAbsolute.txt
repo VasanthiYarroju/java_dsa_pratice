@@ -1,0 +1,15 @@
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\bin\Debug\net8.0\AlternateSeries.exe
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\bin\Debug\net8.0\AlternateSeries.deps.json
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\bin\Debug\net8.0\AlternateSeries.runtimeconfig.json
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\bin\Debug\net8.0\AlternateSeries.dll
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\bin\Debug\net8.0\AlternateSeries.pdb
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.AssemblyInfoInputs.cache
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.AssemblyInfo.cs
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.csproj.CoreCompileInputs.cache
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.sourcelink.json
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.dll
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\refint\AlternateSeries.dll
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.pdb
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\AlternateSeries.genruntimeconfig.cache
+C:\Users\vasan\Downloads\java_dsa_practice\AlternateSeries\obj\Debug\net8.0\ref\AlternateSeries.dll

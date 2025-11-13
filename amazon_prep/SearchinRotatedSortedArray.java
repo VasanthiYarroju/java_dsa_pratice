@@ -20,7 +20,7 @@ public class SearchinRotatedSortedArray {
                 }
             }
             else{
-                if(nums[mid]<target && target<=nums[high]){
+                if(nums[mid]<target && target<=nums[high]){//4,5,6,7,0,1,2,3
                     low=mid+1;
                 }
                 else{
