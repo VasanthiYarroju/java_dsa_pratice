@@ -17,7 +17,7 @@ public class twosum_twopointers {
         return false;
     }
     public static void main(String[] args){
-        int[] arr={1,2,3,4,5,6};
+        int[] arr={2,3,5,1,6,4};
         int target=4;
         System.out.println(finstwosum(arr,target));
     }
